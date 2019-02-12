@@ -1,0 +1,13 @@
+.gallery {
+  height: 100%;
+  width: 100%;
+  .gallery__image {
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+  }
+}
