@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
-import Gallery from "./components/Gallery/Gallery";
+import NewGallery from "./components/Gallery/NewGallery";
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Gallery />
+        <NewGallery />
       </div>
     );
   }

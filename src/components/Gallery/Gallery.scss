@@ -1,11 +1,15 @@
 .gallery {
+  min-width: 800px;
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
   .gallery__image {
+    position: absolute;
     margin: 0 auto;
+    min-width: 800px;
     height: 100%;
-    width: auto;
-    background-size: contain;
+    width: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
