@@ -58,19 +58,24 @@ export default class NewGallery extends Component {
   render() {
     const { index } = this.state;
     return (
-      <div onClick={this.handleClick} className="gallery">
-        <Picture url={imageFiles[index]} />
-        <ToastContainer
-          position="bottom-center"
-          autoClose={2000}
-          hideProgressBar={true}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnVisibilityChange
-          draggable
-          pauseOnHover
-        />
+      <div
+        onClick={this.handleClick}
+        className="gallery container-fluid justify-content-center"
+      >
+        <div className="row">
+          <Picture url={imageFiles[index]} />
+          <ToastContainer
+            position="bottom-center"
+            autoClose={2000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnVisibilityChange
+            draggable
+            pauseOnHover
+          />
+        </div>
       </div>
     );
   }
