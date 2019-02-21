@@ -6,13 +6,10 @@ import imageFiles from "../ImageFiles/Images.js";
 
 class Carousel extends Component {
   render() {
-    const images = imageFiles.map(img => (
-      <div>
-        <img src={img} />
-      </div>
-    ));
+   
     return (
       <RCarousel
+        axis = "horizontal"
         style={"height: 400px"}
         width="800px"
         showIndicators={false}
@@ -23,7 +20,11 @@ class Carousel extends Component {
         emulateTouch
         interval={2000}
       >
-        {images}
+      {
+        imageFiles.map((url, index) => (
+           <img key={index} src={url} />
+        ))
+    }
       </RCarousel>
     );
   }

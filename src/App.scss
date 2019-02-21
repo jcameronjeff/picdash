@@ -19,10 +19,14 @@
 }
 
 .carousel {
+  
+
   .slide {
     max-height: 326px !important;
   }
   .thumbs-wrapper {
     margin: 10px !important;
+    width: 800px;
+    overflow-x: scroll !important;
   }
 }
