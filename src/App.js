@@ -2,30 +2,26 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
 import NewGallery from "./components/Gallery/NewGallery";
-import { Button } from "reactstrap";
-import { Link, Route, BrowserRouter as Router } from "react-router-dom";
-import Landing from "./components/Landing";
-import Carousel from "./components/Carousel/Carousel";
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Navbar from './components/Nav/Nav.js'
+import Carousel from './components/Carousel/Carousel'
+import Home from './components/pages/Home'
 class App extends Component {
   render() {
     return (
+     
       <div className="App">
-        <Router>
-          <div>
-            <nav class="navbar fixed-bottom ">
-              <a class="navbar-link text-light" href="/gallery">
-                gallery
-              </a>
-              <a class="navbar-link text-light" href="/carousel">
-                carousel
-              </a>
-            </nav>
+    <Router> 
+     <div>
 
-            <Route exact path="/gallery" component={NewGallery} />
-            <Route exact path="/carousel" component={Carousel} />
-          </div>
-        </Router>
+       <Navbar/>
+      <Route path="/" component={Home}/>
+      <Route path="/gallery" component={NewGallery}/>
+      <Route path="/carousel" component={Carousel}/>
       </div>
+      </Router>
+      </div>
+   
     );
   }
 }
