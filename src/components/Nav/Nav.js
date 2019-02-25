@@ -1,30 +1,26 @@
-import React from 'react'
-import Link from 'react-router-dom'
-import Toggler from './Toggler.js'
-class Navbar extends React.Component {
-    constructor(props) {
-        super(props);
-        // this.state = { toggleOn: false };
-        // this.toggleNav = this
-        //     .toggleNav
-        //     .bind(this)
-    }
-
-    // toggleNav(e) {
-    //     e.preventDefault();
-    //     this.setState(prevState => ({
-    //         isNavOn: !prevState.isNavOn
-    //     }))
-    // }
-
-    render() {
-        return (
-           <div>
-             <Toggler />
-
-             </div>
-        )
-    }
+import React, { Component } from 'react'
+ import './Nav.scss'
+import Drawer from 'rc-drawer';
+import {Link} from 'react-router-dom';
+class Nav extends Component {
+   render() {
+    return (
+        <div>
+   
+      <Link  activeClassName="active" to="/">Home</Link>
+    
+      <Link  activeClassName="active" to="/gallery">Gallery</Link>
+    
+ 
+      <Link  activeClassName="active" to="/carousel">Carousel</Link>
+ 
+ 
+      <Link  activeClassName="active" to="/catcam">CatCam</Link>
+ 
+ 
+ 
+    </div>
+    )
+  }
 }
-
-export default Navbar
+export default Nav; 

@@ -13,11 +13,12 @@ class Carousel extends Component {
         style={"height: 400px"}
         width="800px"
         showIndicators={false}
-        autoplay
+        autoPlay={true}
         infiniteLoop
         swipeable
         centerMode
         emulateTouch
+        showThumbs={true}
         interval={2000}
       >
       {
